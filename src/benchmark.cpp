@@ -1,5 +1,5 @@
 #include "benchmark.h"
-#include <ctime>
+#include <chrono>
 #include <algorithm>
 #include <numeric>
 #include <iostream>
@@ -7,9 +7,9 @@
 
 uint64_t Benchmark::now_ns()
 {
-    struct timespec ts;
-    clock_gettime(CLOCK_MONOTONIC, &ts);
-    return static_cast<uint64_t>(ts.tv_sec) * 1'000'000'000ULL + ts.tv_nsec;
+    auto now = std::chrono::high_resolution_clock::now();
+    auto ns = std::chrono::duration_cast<std::chrono::nanoseconds>(now.time_since_epoch());
+    return ns.count();
 }
 
 LatencyStats Benchmark::compute_stats(std::vector<uint64_t> &samples)
