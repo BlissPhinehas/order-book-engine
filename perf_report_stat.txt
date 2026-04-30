@@ -1,0 +1,33 @@
+=== Live BBO from sample_ticks.csv ===
+t=1000000  BID 99.5 x100  ASK 0 x0
+t=1000100  BID 99.5 x100  ASK 100 x50
+t=1000200  BID 99.75 x200  ASK 100 x50
+t=1000400  BID 99.75 x200  ASK 100 x25
+t=1000700  BID 99.75 x200  ASK 100 x55
+t=1000900  BID 100 x500  ASK 100 x55
+
+=== Benchmark: 500000 add_order ops ===
+
+=== add_order ===
+  samples   : 500000
+  throughput: 11.2 M ops/sec
+  min       : 26.0 ns
+  mean      : 65.6 ns
+  p50       : 29.0 ns
+  p99       : 70.0 ns
+  p99.9     : 1584.0 ns
+  max       : 5183681.0 ns
+
+ Performance counter stats for './build/order_book':
+
+          86281701      task-clock:u                     #    0.974 CPUs utilized             
+             20010      page-faults:u                    #  231.915 K/sec                     
+                 0      context-switches:u               #    0.000 /sec                      
+                 0      cpu-migrations:u                 #    0.000 /sec                      
+
+       0.088622170 seconds time elapsed
+
+       0.043419000 seconds user
+       0.043419000 seconds sys
+
+
