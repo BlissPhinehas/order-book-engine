@@ -67,3 +67,7 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+perf.data
+perf.data.old
+perf_report_stat.txt
+perf_report_hotspots.txt
