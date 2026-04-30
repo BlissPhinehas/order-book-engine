@@ -1,5 +1,3 @@
-```bash
-cat > README.md << 'HEREDOC'
 # High-Performance Order Book Engine
 
 A C++ implementation of a limit order book — the core data structure at the
